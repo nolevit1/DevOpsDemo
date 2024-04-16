@@ -3,7 +3,7 @@ export class GuiModel {
 
     private _guiModel = {
         "application": {
-            "title": "DevOpsDemo FS2024",
+            "title": "DevOpsDemo Nole FS2024",
             "formList": [
                 {
                     "id": "OwnUserForm",
@@ -87,6 +87,43 @@ export class GuiModel {
                         }
                     ]
                 },
+                /*New Form for Employees*/
+                {
+                    "id": "EmployeeForm",
+                    "title": { default: "Employee" },
+                    "url": "/employee",
+                    "formFieldList": [
+                        {
+                            "id":   "name",
+                            "type": "text",
+                            "name": { default: "name" },
+                            "required": true,
+                            "width": 2
+                        },
+                        {
+                            "id": "job",
+                            "type": "text",
+                            "name": { default: "job" },
+                            "newRow": true,
+                            "maxLength": 4000,
+                            "height": 4,
+                            "width": 2
+                        },
+                        {
+                            "type": "deleteButton",
+                            "name": "Delete"
+                        },
+                        {
+                            "type": "cancelButton",
+                            "name": "Cancel"
+                        },
+                        {
+                            "type": "okButton",
+                            "name": "Ok"
+                        }
+                    ]
+                },
+                /*End*/
             ],
             "pageList": [
                 {
@@ -95,7 +132,7 @@ export class GuiModel {
                     "elementList": [
                         {
                             "type": "pageLabel",
-                            "value": "<h4>Willkommen bei DevOps</h4>",
+                            "value": "<h4>Willkommen bei DevOps von Nole</h4>",
                             "newRow": true
                         },
                         {
@@ -104,6 +141,15 @@ export class GuiModel {
                             "icon": "fa-file-alt",
                             "color": "wet-asphalt",
                             "page": "toDoPage",
+                            "width": 2,
+                            "newRow": true,
+                        },
+                        {
+                            "type": "button",
+                            "name": { default: "Employees" },
+                            "icon": "fa-solid fa-keyboard",
+                            "color": "teal",
+                            "page": "employeePage",
                             "width": 2,
                             "newRow": true,
                         },
@@ -134,6 +180,35 @@ export class GuiModel {
                             "url": "/todo",
                             "form": {
                                 "form": "ToDoForm"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": "employeePage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": { default: "Neuer Mitarbeiter"},
+                            "icon": "fa-user",
+                            "color": "green",
+                            "width": 2,
+                            "form" : {
+                                "form" : "EmployeeForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "name": "Employee",
+                            "icon": "fa-user",
+                            "color": "wet-asphalt",
+                            "search": true,
+                            "url": "/employee",
+                            "form": {
+                                "form": "EmployeeForm"
                             }
                         }
                     ]
