@@ -21,7 +21,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EmployeeController {
 
-    private Map<Integer, Employee> employees = new HashMap<Integer, Employee>();
+    /* Alte Codezeile */
+    /*private Map<Integer, Employee> employees = new HashMap<Integer, Employee>();*/
+    /* Neue Codezeile */
+    private Map<Integer, Employee> employees = new HashMap<>();
 
     @EventListener(ApplicationReadyEvent.class)
     public void init() {

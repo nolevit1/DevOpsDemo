@@ -184,6 +184,7 @@ export class GuiModel {
                         }
                     ]
                 },
+                /*New Page for Employees*/
                 {
                     "id": "employeePage",
                     "elementList": [
@@ -213,6 +214,7 @@ export class GuiModel {
                         }
                     ]
                 },
+                /*End*/
             ]
         }
     };
