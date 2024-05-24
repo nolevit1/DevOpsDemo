@@ -13,5 +13,14 @@ class ToDoTest {
         assertEquals("description", toDo1.getDescription());
         assertEquals(1, toDo1.getId());
     }
+
+    @Test
+    void testCreate() {
+        EmployeeController controller = new EmployeeController();
+        var employee = new Employee(6, "John", "Developer");
+        controller.createEmployee(employee);
+        assertEquals(1, controller.countemployee());
+        assertEquals(1, controller.employee().size());
+    }
     
 }

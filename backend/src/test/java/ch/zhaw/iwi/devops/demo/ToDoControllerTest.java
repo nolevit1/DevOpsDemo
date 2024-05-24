@@ -4,15 +4,22 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-class ToDoControllerTest {
+class EmployeeControllerTest {
     
     @Test
     void testCreate() {
-        ToDoController controller = new ToDoController();
-        var todo = new ToDo(1, "t", "d");
-        controller.createTodo(1, todo);
-        assertEquals(1, controller.count());
-        assertEquals(1, controller.todo().size());
+        EmployeeController controller = new EmployeeController();
+        var employee = new Employee(6, "John", "Developer");
+        controller.createEmployee(employee);
+        assertEquals(1, controller.countemployee());
+        assertEquals(1, controller.employee().size());
     }
-
+    @Test
+    void testCreate2() {
+        EmployeeController controller = new EmployeeController();
+        var employee = new Employee(7, "Johny", "Developer");
+        controller.createEmployee(employee);
+        assertEquals(1, controller.countemployee());
+        assertEquals(1, controller.employee().size());
+    }
 }
