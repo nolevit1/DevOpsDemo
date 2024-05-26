@@ -132,7 +132,7 @@ export class GuiModel {
                     "elementList": [
                         {
                             "type": "pageLabel",
-                            "value": "<h4>Willkommen bei DevOps von Nole auf Azure :-)</h4>",
+                            "value": "<h4>Willkommen bei DevOps von Nole auf Azure :)</h4>",
                             "newRow": true
                         },
                         {
