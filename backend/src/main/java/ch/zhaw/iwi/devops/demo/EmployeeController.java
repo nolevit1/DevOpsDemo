@@ -30,7 +30,8 @@ public class EmployeeController {
         this.employees.put(2,new Employee(2, "Moreno", "Devops"));
         this.employees.put(3,new Employee(3, "Billy", "Chef"));
         this.employees.put(4,new Employee(4, "Jimmy", "Koch"));
-        this.employees.put(5,new Employee(5, "Frank", "Tester"));
+        this.employees.put(5,new Employee(5, "Frank", "Software Tester"));
+        this.employees.put(5,new Employee(5, "Franco", "Hardware Tester"));
         System.out.println("Init Data Employee");
     }
 
